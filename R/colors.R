@@ -1,8 +1,8 @@
 NUDZ_COLORS_HEX <- c(
-  `red` = '',
-  `yellow` = '',
-  `light_blue` = '',
-  `dark_blue` = ''
+  `red` = '#e10613',
+  `yellow` = '#ffec00',
+  `light_blue` = '#5bc3f0',
+  `dark_blue` = '#164192'
 )
 
 #' Returns HEX color from the NUDZ color list
@@ -16,11 +16,9 @@ NUDZ_COLORS_HEX <- c(
 #' colors <- nudz_colors('red')
 #'
 #'
-nudz_colors <- function(colors = NULL){
+nudz_colors <- function(...){
+  colors <- c(...)
   if(is.null(colors)) return(NUDZ_COLORS_HEX)
-  if(colors %in% names(NUDZ_COLORS_HEX)){
-    return(NUDZ_COLORS_HEX[colors])
-  }
-  warning('This color doesn\'t exist')
-  return(NULL)
+  # Validation
+  return(NUDZ_COLORS_HEX[colors])
 }
