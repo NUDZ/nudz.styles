@@ -20,3 +20,9 @@ knitr::opts_chunk$set(
 library(ggplot2)
 theme_set(theme_minimal())
 ```
+
+```{r}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+    geom_point(size = 4) +
+    scale_color_nudz(reverse = T, guide = "none")
+```

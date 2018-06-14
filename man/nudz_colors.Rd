@@ -4,7 +4,7 @@
 \alias{nudz_colors}
 \title{Returns HEX color from the NUDZ color list}
 \usage{
-nudz_colors(colors = NULL)
+nudz_colors(...)
 }
 \arguments{
 \item{color}{}
