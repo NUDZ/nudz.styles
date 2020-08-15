@@ -1,7 +1,7 @@
 Package: nudz.styles
 Type: Package
 Title: NUDZ custom styles for R
-Version: 0.1.0
+Version: 0.2.0
 Author: Lukáš "hejtmy" Hejtmánek
 Maintainer: Lukáš "hejtmy" Hejtmánek <hejtmy@gmail.com>
 Description: Adds palettes and other helpers to style your knitted documents and presentations based on NUDZ colors
@@ -11,4 +11,4 @@ LazyData: true
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1

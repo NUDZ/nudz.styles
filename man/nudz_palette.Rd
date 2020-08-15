@@ -4,18 +4,23 @@
 \alias{nudz_palette}
 \title{Creates palette to be used in scales or elsewhere}
 \usage{
-nudz_palette(palette = "main", reverse = FALSE, n_colors = c(),
-  discrete = TRUE, ...)
+nudz_palette(
+  palette = "main",
+  reversed = FALSE,
+  n_colors = c(),
+  discrete = TRUE,
+  ...
+)
 }
 \arguments{
 \item{palette}{name of the palette to interpolate.
 \itemize{
 \item \strong{main} Main red blue and dark blue palette
-}
+\item \strong{grey_and_blue} Combination of grey and blue colors
+Defaults to "main"
+}}
 
-Defaults to "main"}
-
-\item{reverse}{logical determining if the order of the colors should be
+\item{reversed}{logical determining if the order of the colors should be
 reversed}
 
 \item{n_colors}{either how many colors from the palette to interpolate or

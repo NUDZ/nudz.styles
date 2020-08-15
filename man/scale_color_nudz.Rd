@@ -5,11 +5,21 @@
 \alias{scale_fill_nudz}
 \title{Scale colors or fill for ggplot aesthetics}
 \usage{
-scale_color_nudz(palette = "main", discrete = TRUE, reverse = FALSE,
-  ...)
+scale_color_nudz(
+  palette = "main",
+  discrete = TRUE,
+  reversed = FALSE,
+  n_colors = c(),
+  ...
+)
 
-scale_fill_nudz(palette = "main", discrete = TRUE, reverse = FALSE,
-  ...)
+scale_fill_nudz(
+  palette = "main",
+  discrete = TRUE,
+  reversed = FALSE,
+  n_colors = c(),
+  ...
+)
 }
 \arguments{
 \item{palette}{name of the palette to be used. See \code{\link{nudz_palette}}
@@ -18,10 +28,16 @@ for all the available options}
 \item{discrete}{logical determining if a discreate (finite values) scale
 should be created or a continuous interpolation between colors of given palette}
 
-\item{reverse}{shoudl hte order of the colors be reversed}
+\item{reversed}{shoudl hte order of the colors be reversed}
 
-\item{...}{other parameter passed to \code{\link{ggplot2::discrete_scale}}
+\item{n_colors}{selection of colors to be in the palette.
+See \code{\link{nudz_palette}}}
+
+\item{...}{other parameter passed to \code{\link[ggplot2]{discrete_scale}}
 or to the \code{\link{ggplot2::scale_color_gradientn}}}
+}
+\value{
+ggplot2::discrete_scale or scale_color_gradientn with selected colors
 }
 \description{
 Scale colors or fill for ggplot aesthetics

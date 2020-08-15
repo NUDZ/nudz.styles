@@ -7,15 +7,22 @@
 nudz_colors(...)
 }
 \arguments{
-\item{color}{vector of colors which are translated to their hex interpretations}
+\item{color}{vector of colors which are translated to their hex interpretations.
+Possible values at shi moment are
+\itemize{
+\item red
+\item yellow
+\item light_blue
+\item dark_blue
+\item light_grey
+\item dark_grey
+\item black
+\item white
+}}
 }
 \value{
 hex color
 }
 \description{
 Returns HEX color from the NUDZ color list
-}
-\examples{
-nudz_colors('red')
-nudz_colors(c('red', 'light_blue'))
 }
