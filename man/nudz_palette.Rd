@@ -2,13 +2,37 @@
 % Please edit documentation in R/palettes.R
 \name{nudz_palette}
 \alias{nudz_palette}
-\title{Title}
+\title{Creates palette to be used in scales or elsewhere}
 \usage{
-nudz_palette(palette = "main", reverse = F, ...)
+nudz_palette(palette = "main", reverse = FALSE, n_colors = c(),
+  discrete = TRUE, ...)
 }
 \arguments{
-\item{...}{}
+\item{palette}{name of the palette to interpolate.
+\itemize{
+\item \strong{main} Main red blue and dark blue palette
+}
+
+Defaults to "main"}
+
+\item{reverse}{logical determining if the order of the colors should be
+reversed}
+
+\item{n_colors}{either how many colors from the palette to interpolate or
+indices of colors  which to interpolate from the palette. If a single number
+(n) then colors 1...n will be selected. If multiple numbers are passed
+then the colors at given indices are selected. if empty, all colors are
+used in defining the palette. Defaults to empty.}
+
+\item{discrete}{should the palette be only discrete values}
+
+\item{...}{optional parameters passed to colorRampPalette if discrete is set
+to FALSE}
+}
+\value{
+vector of hex colors if discrete is TRUE and colorRamp object if FALSE.
+Prepares the color interpolation object to be used in construction of your own
 }
 \description{
-Title
+Creates palette to be used in scales or elsewhere
 }

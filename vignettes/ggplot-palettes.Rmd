@@ -9,20 +9,39 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
 ```{r setup, include=F}
 library(ggplot2)
+library(nudz.styles)
 theme_set(theme_minimal())
+```
+##
+```{r}
+scales::show_col(nudz_palette()(4))
+```
+
+
+## Discrete scales
+```{r}
+plt <- ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+    geom_point(size = 4)
+plt + scale_color_nudz()
 ```
 
 ```{r}
-ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
-    geom_point(size = 4) +
-    scale_color_nudz(reverse = T, guide = "none")
+plt + scale_color_()
+```
+
+```{r}
+plt + scale_color_nudz(reverse = TRUE, guide = "none")
+```
+
+
+## Continuous scales
+```{r}
+plt <- ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Width)) + 
+  geom_point()
+plt + scale_color_nudz(discrete = FALSE)
+```
+
+```{r}
 ```

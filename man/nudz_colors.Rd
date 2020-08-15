@@ -7,7 +7,7 @@
 nudz_colors(...)
 }
 \arguments{
-\item{color}{}
+\item{color}{vector of colors which are translated to their hex interpretations}
 }
 \value{
 hex color
@@ -16,7 +16,6 @@ hex color
 Returns HEX color from the NUDZ color list
 }
 \examples{
-colors <- nudz_colors('red')
-
-
+nudz_colors('red')
+nudz_colors(c('red', 'light_blue'))
 }

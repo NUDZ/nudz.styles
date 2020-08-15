@@ -7,15 +7,14 @@ NUDZ_COLORS_HEX <- c(
 
 #' Returns HEX color from the NUDZ color list
 #'
-#' @param color
+#' @param color vector of colors which are translated to their hex interpretations
 #'
 #' @return hex color
 #' @export
 #'
 #' @examples
-#' colors <- nudz_colors('red')
-#'
-#'
+#' nudz_colors('red')
+#' nudz_colors(c('red', 'light_blue'))
 nudz_colors <- function(...){
   colors <- c(...)
   if(is.null(colors)) return(NUDZ_COLORS_HEX)
