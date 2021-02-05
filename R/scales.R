@@ -33,7 +33,7 @@ scale_fill_nudz <- function(palette = "main", discrete = TRUE, reversed = FALSE,
   pal <- nudz_palette(palette = palette, reverse = reversed, discrete = FALSE,
                       n_colors = n_colors)
   if (discrete) { #fills and colors are the same if discrete
-    discrete_scale("colour", paste0("nudz_", palette), palette = pal, ...)
+    discrete_scale("fill", paste0("nudz_", palette), palette = pal, ...)
   } else {
     scale_fill_gradientn(colours = pal(256), ...)
   }
